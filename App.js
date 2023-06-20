@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import 'react-native-gesture-handler';
+import {Drawer, NativeBaseProvider} from "native-base";
+import {NavigationContainer} from "@react-navigation/native";
+const LinearGradient = require('expo-linear-gradient').LinearGradient;
+import StackNav from "./source/Navigation";
+import {theme} from "./source/components/helpers.js";
+import DrawerNav from "./source/Navigation";
 
+const config = {
+    dependencies: {
+        'linear-gradient': LinearGradient
+    }
+};
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return (
+        <NavigationContainer>
+                {
+                    <NativeBaseProvider theme={theme} config={config}>
+                        <DrawerNav/>
+                    </NativeBaseProvider>
+                }
+        </NavigationContainer>
+    );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

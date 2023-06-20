@@ -1,14 +1,15 @@
 {
   "expo": {
-    "name": "ParkManager",
+    "name": "Park Manager",
     "slug": "ParkManager",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "primaryColor": "#0644A8",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
